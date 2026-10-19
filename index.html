@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0b0b">
+  <title>Saint.Traders</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b0b0b;
+      color: #f5f5f5;
+    }
+    header {
+      padding: 20px;
+      border-bottom: 1px solid #4b3a13;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .logo { color: #d6ad52; font-size: 24px; font-weight: bold; }
+    nav a { color: #ddd; text-decoration: none; margin-left: 14px; }
+    main { max-width: 1000px; margin: auto; padding: 30px 20px; }
+    .hero { padding: 35px 0; }
+    .hero h1 { font-size: clamp(32px, 7vw, 54px); margin-bottom: 12px; }
+    .gold { color: #d6ad52; }
+    .muted { color: #aaa; line-height: 1.6; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap: 16px; }
+    .card {
+      background: #151515;
+      border: 1px solid #393020;
+      border-radius: 12px;
+      padding: 20px;
+    }
+    .value { font-size: 26px; margin-top: 10px; }
+    button {
+      padding: 12px 18px;
+      border: 0;
+      border-radius: 7px;
+      background: #d6ad52;
+      color: #111;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    footer { text-align: center; color: #888; padding: 30px 15px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">SAINT.TRADERS</div>
+    <nav>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#markets">Markets</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="gold">DISCIPLINE · STRATEGY · GROWTH</p>
+      <h1>Your Trading Journey<br><span class="gold">Starts Here.</span></h1>
+      <p class="muted">A central place to explore markets, learn trading,
+      and track your demo practice.</p>
+      <button onclick="document.getElementById('dashboard').scrollIntoView({behavior:'smooth'})">
+        Explore Dashboard
+      </button>
+    </section>
+
+    <section id="dashboard">
+      <h2>Trading Dashboard</h2>
+      <p class="muted">Demo overview · Sample information only</p>
+      <div class="grid">
+        <div class="card">
+          <div class="muted">Demo Balance</div>
+          <div class="value gold">$10,000.00</div>
+        </div>
+        <div class="card">
+          <div class="muted">Demo Trades</div>
+          <div class="value">0</div>
+        </div>
+        <div class="card">
+          <div class="muted">Platform Status</div>
+          <div class="value">Ready</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="markets" style="margin-top:40px">
+      <h2>Markets</h2>
+      <div class="grid">
+        <div class="card"><strong>Forex</strong><p class="muted">Explore currency markets.</p></div>
+        <div class="card"><strong>Commodities</strong><p class="muted">Learn about commodity markets.</p></div>
+        <div class="card"><strong>Indices</strong><p class="muted">Explore market indices.</p></div>
+      </div>
+    </section>
+
+    <section id="about" style="margin-top:40px">
+      <h2>About Saint.Traders</h2>
+      <p class="muted">A trading education and dashboard project.
+      Figures shown are illustrative, not live market data.</p>
+    </section>
+  </main>
+
+  <footer>© 2026 Saint.Traders · Educational demo</footer>
+</body>
+</html>
